@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Font Size */
+    --h1-font-size:2.5rem;
+    --h2-font-size:2rem;
+    --h3-font-size:1.7rem;
+    --h4-font-size:1.4rem;
+    --h5-font-size:1.2rem;
+    --p-font-size:1rem;
+    --li-font-size:0.9rem;
+
+    /* Light theme color */
+    --header-color: #ced6e0;
+    --h1-color: #5352ed;
+    --h2-color: #009432;
+    --h3-color: #F79F1F;
+    --h4-color: #D980FA;
+    --h5-color: #006266;
+    --example-color: #5f27cd;
+    --li-color: #0652DD;
+    --section-bg-color: #f1f2f6;
+    --button-show-color: #22d25d;
+    --button-hide-color: rgb(248, 85, 56);
+    --dark-mode-bgcolor: #222f3e;
+    --dark-mode-color: #c8d6e5;
+
+    /* Padding */
+    --header-padding:1.5rem;
+    --section-padding: 7rem;
+    --footer-padding: 1rem;
+    --head-padding: 3rem;
+    --same-padding: 20px;
+}
+.dark-mode{
+    /* Dark theme color */
+    --header-color: #1e272e;
+    --h1-color: #18dcff;
+    --h2-color: #d2dae2;
+    --h3-color: #45aaf2;
+    --h4-color: #1e3799;
+    --h5-color: #1e272e;
+    --example-color: indigo;
+    --li-color: #d1d8e0;
+    --section-bg-color: #636e72;
+    --button-show-color: #ffb142;
+    --button-hide-color: #2c2c54;
+    --dark-mode-bgcolor: #c8d6e5;
+    --dark-mode-color: #222f3e;
+}
+
+/* Utility Class */
+header{
+    padding: var(--header-padding) var(--section-padding);
+    background-color: var(--header-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+section{
+    background-color: var(--section-bg-color);
+    padding: var(--section-padding);
+    font-family: 'Dosis', sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+footer{
+    padding: var(--footer-padding) var(--section-padding);
+    background-color: var(--header-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+button{
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+h1{
+    font-size: var(--h1-font-size);
+    color: var(--h1-color);
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 2px 1px 5px black;
+    animation-name: demo;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+h2{
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: var(--same-padding) 0;
+}
+h3{
+    font-size: var(--h3-font-size);
+    color: var(--h3-color);
+    padding: var(--same-padding) 0;
+    text-shadow: 1px 1px 2px black;
+}
+h4{
+    font-size: var(--h4-font-size);
+    color: var(--h4-color);
+    padding: var(--same-padding) 0;
+}
+h5{
+    font-size: var(--h5-font-size);
+    color: var(--h5-color);
+    padding: var(--same-padding) 0;
+}
+p{
+    font-size: var(--p-font-size);
+    padding: 10px 0;
+}
+li{
+    font-size: var(--li-font-size);
+    color: var(--li-color);
+    margin: 0 2rem ;
+    padding: 8px 0;
+}
+
+
+#show{
+    background-color: var(--button-show-color);
+    color: var(--button-hide-color);
+    border: 2px solid var(--button-show-color);
+}
+#hide{
+    background-color: var(--button-hide-color);
+    color: var(--button-show-color);
+    border: 2px solid var(--button-hide-color);
+}
+#show:hover{
+    background-color: transparent;
+    color: var(--button-show-color);
+}
+#hide:hover{
+    background-color: transparent;
+    color: var(--button-hide-color);
+}
+#dark_mode{
+    position: fixed;
+	bottom: 2rem;
+	right: 1rem;
+    background-color: var(--dark-mode-bgcolor);
+    color: var(--dark-mode-color);
+    border: 2px solid transparent;
+}
+#dark_mode:hover{
+    background-color: transparent;
+    border: 2px solid var(--dark-mode-bgcolor);
+    color: var(--dark-mode-bgcolor);
+}
+.example{
+    color: var(--example-color);
+}
+
+@keyframes demo{
+    from{
+        filter: opacity(0.1);
+    }
+    to{
+        filter: opacity(1);
+    }
+}
+
+
+/* MediaQuery */
+
+@media screen and (width < 785px) {
+    :root{
+
+        /* font size */
+        --h1-font-size:2rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size:1.2rem;
+        --h4-font-size:1rem;
+        --h5-font-size:0.8rem;
+        --p-font-size:0.8rem;
+        --li-font-size:0.7rem;
+
+        /* Padding */
+        --header-padding:1.5rem;
+        --section-padding: 1rem;
+        --footer-padding: 1rem;
+        --head-padding: 3rem;
+        --same-padding: 20px;
+    }
+    .section{
+        overflow: hidden;
+    }
+}

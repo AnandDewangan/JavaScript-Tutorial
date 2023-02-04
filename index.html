@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to JavaScript Tutorial</h1>
+    </header>
+
+    <main>
+        <section class="BasicJava">
+            <div id="head">
+                <h2>Basic JavaScript</h2>
+                <button id="show" class="bsShow">Show</button>
+                <button id="hide" class="bsHide">Hide</button>
+            </div>
+            <div id="BasicJS">
+                <h3>Introduction</h3>
+                <p>JavaScript is a object oriented programming language which is used to serval website for scripting
+                    the webpages.
+                    It was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator
+                    browser.
+                    Js follows the syntax and structure of c programming language It is a case sensitive language.
+                    May 1995 Marc Andreessen coined the first code of javascript named Mocha.</p>
+
+                <h3>Application of JavaScript</h3>
+                <ol>
+                    <li>Client-side validation</li>
+                    <li>Dynamic drop-downs menus</li>
+                    <li>Displaying date and time</li>
+                    <li>Displaying pop up windows and dialog boxes(like alert box, prompt dialog box and confirm dialog
+                        box)</li>
+                    <li>Displaying clocks</li>
+                </ol>
+
+                <h3>place to put javascript</h3>
+                <ol>
+                    <li>Between the body tag</li>
+                    <li>Between the head tag</li>
+                    <li>External file storage(.js)</li>
+                </ol>
+
+                <h3>JavaScript comments</h3>
+                <p>It is used to add information about the code, warnings or suggestions so that end user can esily
+                    interpret the code.
+                    To make code easy to understand and to avoid the unnecessary code </p>
+                <ol>
+                    <li>single-line comment. It represent the double forward slashes. It can used before and after the
+                        statement (//)</li>
+                    <li>multi-line comments (/* */)</li>
+                </ol>
+
+                <h3>Variables in JavaScript</h3>
+                <ol>
+                    <li>Local Variable</li>
+                    <p>A Js local variable is decleared inside the block or function. It is accessible within the
+                        function or block only.</p>
+                    <li>Globle Variable</li>
+                    <p>A Js global variable is accessible from any function.
+                        It is decleared outside the function or declared with window object.</p>
+                </ol>
+                <h4>There are some rules while declearing a js variables:</h4>
+                <ol>
+                    <li>Name must start with a letter(a to z or A to Z), underscore(_) doller($) sign.</li>
+                    <li>After first letter we can use digits(0 to 9), Ex- v1, value10.</li>
+                    <li>Js variables are case sensitive Ex- x and X are diffent variables.</li>
+                </ol>
+                <p class="example">Example:</p>
+<pre>
+    function msg(){
+        var value = 50; // Globle variable
+        function a(){
+            alert(value);
+        }
+        a();
+    }
+                    
+    function msg(){
+        function a(){
+            var value = 50;
+        }
+        function b(){
+             alert(typeof(window.value));
+        }
+        b();
+    }
+</pre>
+
+                <h3>Data Types</h3>
+                <ol>
+                    <li>Premitive Data types</li>
+                    <h4>There are five types of Premitive data types in js</h4>
+                    <ul>
+                        <li>String</li>
+                        <li>Number</li>
+                        <li>Boolean</li>
+                        <li>Undefined</li>
+                        <li>null</li>
+                    </ul>
+                    <li>Non-premitive Data types</li>
+                    <ul>
+                        <li>Object</li>
+                        <li>Array</li>
+                        <li>RegExp (Represent Regular Expression)</li>
+                    </ul>
+                </ol>
+
+                <h3>Operators</h3>
+                <p>JS operators are symbols that are used to perform operations on operands.</p>
+                <ul>
+                    <h5>Arithmetic Operators</h5>
+                    <ol>
+                        <li>(+): Addition</li>
+                        <li>(-): Substraction</li>
+                        <li>(*): Multiplication</li>
+                        <li>(/): Division</li>
+                        <li>(%): Modulus(Remainder)</li>
+                        <li>(++): Increment</li>
+                        <li>(--): Decrement</li>
+                    </ol><br>
+                    <h5>Comparison Operators(Relational)</h5>
+                    <ol>
+                        <li>(==): is equal to</li>
+                        <li>(===): equal and same type</li>
+                        <li>(!=): Not equal to</li>
+                        <li>(!==): Not equal to and type</li>
+                        <li>(>): Greater than</li>
+                        <li>(<): Less than</li>
+                        <li>(>=): Greater than and equal to</li>
+                        <li>(<=): Less than and equal to</li>
+                    </ol><br>
+                    <h5>Bitwise Operators</h5>
+                    <ol>
+                        <li>(&): And</li>
+                        <li>(|): OR</li>
+                        <li>(^): XOR</li>
+                        <li>(~): NOT</li>
+                        <li>(<<): Left shift </li>
+                        <li>(>>): Right shift</li>
+                        <li>(>>>): Right shift with zero</li>
+                    </ol><br>
+                    <h5>Logical Operators</h5>
+                    <ol>
+                        <li>(&&): AND</li>
+                        <li>(||): OR</li>
+                        <li>(!): Not</li>
+                    </ol><br>
+                    <h5>Assignment Operators</h5>
+                    <ol>
+                        <li>(=): Assign</li>
+                        <li>(+=): Add and assign</li>
+                        <li>(-=): Subtract and assign</li>
+                        <li>(*=): Multiply and assign</li>
+                        <li>(/=): Divide and assign</li>
+                        <li>(%=): Modulo and assign</li>
+                    </ol>
+                </ul>
+
+                <h3>If-Else</h3>
+                <p>The JS if else statement is used to execute the code whether condition is true or false.</p>
+                <ol>
+                    <li>If the condition.(true)</li>
+                    <li>else if condition</li>
+                    <li>else condition</li>
+                </ol>
+                <p class="example">Example:</p>
+<pre>
+    function msg(){
+
+        while(true){
+        var a = prompt();
+        if(10==a){
+            alert ("Anand");
+            break;
+        }
+        else{
+            alert("Dewangan");
+        }
+    }
+    }
+</pre>
+
+                <h3>Switch-Statement</h3>
+                <p>The JS switch statement is used to excute one code from multiple expressions.</p>
+                <p class="example">Example:</p>
+<pre>
+    function msg(){
+        var a = prompt();
+        switch(Number(a)){
+            case 1:
+                alert("one");
+                break;
+            case 2:
+                alert("two");
+                break;
+            case 3:
+                alert("three");
+                break;
+            case 4:
+                 alert("four");
+                break;
+            case 5:
+                 alert("five");
+                break;
+            default:
+                alert("Number");
+        }    
+    }
+</pre>
+
+                <h3>Loops</h3>
+                <ol>
+                    <li>for loop</li>
+<pre>for(initialization; condition; 
+    increment/decrement){
+    code to be executed;
+}</pre>
+                    <li>while loop</li>
+<pre>while(condition){
+    code to be executed;
+}</pre>
+                    <li>do-while loop</li>
+<pre>do{
+    code to be executed;
+}while(condition);</pre>
+                </ol>
+
+                <h3>Functions</h3>
+                <p>JS are used to perform operations. We can call JS function many times to reuse the code.</p>
+
+                <h4>Advantage of JS</h4>
+                <ol>
+                    <li>Code reusability:- We can call function several times so it save coding.</li>
+                    <li>Less coding:- It makes our programs compact.</li>
+                </ol>
+<pre>function functionName(arguments){
+    code to be executed
+}</pre>
+                <p class="example">Example:</p>
+<pre>
+    Function with return value:-
+
+    function getinfo(){
+        return "Hello Word";
+    }
+
+    document.write(getinfo());
+</pre>
+
+                <h3>JS Function Object</h3>
+                <p>In JS the purpose of function, contructor is to create a new function object. It excutes the code
+                    globally.
+                    If we call the contructor directly, a function is created dynamically but in an unsecured way.</p>
+                <p class="example">Syntax</p>
+<pre>
+new Function([arg1[,arg2[,....argn]],]
+function body)
+</pre>
+                <h4>Parameter</h4>
+                <p>arg1, arg2...argn it represent the argument used by function.
+                    function Body:- It represents the function definition.</p>
+                <h4>Methods</h4>
+                <ul>
+                    <li>apply():- It is used to call a function contains this value and a single array of arguments.
+                    </li>
+                    <li>bind():- It is used to create a new function.</li>
+                    <li>call():- It is used to call a function contains this value and an argument list.</li>
+                    <li>toString():- It returns the result in a form of a string.</li>
+                </ul>
+                <h4>Function Object Examples</h4>
+                <p class="example">Example:</p>
+<pre>
+    var add = new Function("num1",
+     "num2", "return num1+num2");
+    document.writeln(add(2,5));
+</pre>
+                <p class="example">Example:</p>
+<pre>
+    var pow = new Function("num1", 
+    "num2", "return num1**num2");
+    document.writeln(pow(2,4));
+</pre>
+            </div>
+        </section>
+        <section class="DOM">
+            <div id="head">
+                <h2>DOM (Document Object Model)</h2>
+                <button id="show" class="domShow">Show</button>
+                <button id="hide" class="domHide">Hide</button>
+            </div>
+            <div id="DOM">
+                <h3>Introduction</h3>
+                <p>The document object represent the whole html document.
+                    When html document is loaded in the browser, it becomes a documents object. It is root element that
+                    represent the
+                    html document. It has properties and methods. By the help of document object, we can add dynamic
+                    content to our web page.
+                </p>
+                <h5>"window.document" is same as "document".</h5>
+                <p>The DOM(document object model) is a platform and language-neutral interface that allows programs and
+                    scripts to
+                    to dynamically access and update the content, structure and style of a document.</p>
+
+                <h3>Methods of document object</h3>
+                <p>we can access and change the contents of document by its methods.</p>
+                <ul>
+                    <li>write("string"):- writes the given string on the documnet.</li>
+                    <li>writeln("string"):- writes the given string on the document with newline character at the end.
+                    </li>
+                    <li>getElementById():- returns the elements having the given id value.</li>
+                    <li>getElementsByName():- returns all the elements having the given name value.</li>
+                    <li>getElementsByTagName():- returns all the elements having the given tag name.</li>
+                    <li>getElementsByClassName():- returns all the elements having the given class name.</li>
+                </ul>
+
+                <h3>Accessing field value by document object</h3>
+                <p>Here we are using:- "document.form1.name.value" to get the value of the name field.</p>
+                <p>Here, "document" is the root element that represent the html document.
+                    "form1" id the name of the form.
+                    "name" is the attribute name of the input text.
+                    "value" is the property, that returns the value of the input text.</p>
+
+                <h3>document.getElementById()</h3>
+                <p class="example">Example:</p>
+                <pre>
+function getCube() {
+var value = document.getElementById("sample").value;   
+alert(value*value*value);
+}
+                </pre>
+
+                <h3>document.getElementsByClassName()</h3>
+                <p>The getElementsByClassName() method is used for selecting or getting the elements throught their
+                    class
+                    name value. It will search the whole document and will return only those elements which match the
+                    specified
+                    or given class name.</p>
+                <p>var ele = document.getElementsByClassName("name");</p>
+                <p>Here, name is the mandatory arguments to be passed. It is the string that specifies either a single
+                    classname or multiple class names to match.</p>
+                <p class="example">Example:</p>
+                <p>var x = document.getElementsByClassName("Class");
+                    document.write(x);</p>
+
+                <h3>document.innerHtml</h3>
+                <p>The innerHtml property can be used to write the dynamic html on the html document. It is used mostly
+                    in the web pages to generate the dynamic html such as registration form, comment form, links etc.
+                </p>
+                <p class="example">Example:</p>
+                <p>In this exp we are dynamically writing the html form inside the div name having the id mylocation.
+                    We are identifing this position by calling the document.getElementById() method.</p>
+
+                <h3>document.innerText</h3>
+                <p>The innerText property can be used to write the dynamic text on the html document. Here text will not
+                    be interpreted as html text but a normal text.</p>
+                <p>It is used mostly in the web pages to generate the dynamic content such as writing the validation
+                    message,
+                    password strength etc.</p>
+            </div>
+        </section>
+        <section class="Object">
+            <div id="head">
+                <h2>Object</h2>
+                <button id="show" class="objShow">Show</button>
+                <button id="hide" class="objHide">Hide</button>
+            </div>
+            <div id="object">
+                <h3>Introduction</h3>
+                <p>A JS object is an entity having state and behavior(Properties and Method). JS is an object-based
+                    language, Everything is an object in JS.</p>
+                <p>Ex:- car, bike, pen, laptop etc.</p>
+
+                <h3>Creating Object in JS</h3>
+                <ol>
+                    <h5>By object literal</h5>
+                    <p>object = {property1:value1, property2:value2...propertyn:valuen}
+                        property and value is seperated by colon(:).</p>
+                    <p class="example">Example:</p>
+                    <p>emp = {id:102, name:"Anand", company:"Google"};
+                        document.writeln(emp.id+" "+emp.name+" "+emp.company);</p>
+                    <h5>By creating instance of Object</h5>
+                    <p>var objectname = new object();</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var emp = new Object();
+emp.id = 102;
+emp.name = "Anand";
+emp.company = "Google";
+document.writeln(emp.id+" "+emp.name+
+" "+emp.company);
+                    </pre>
+                    <h5>By using an object constructor</h5>
+                    <p>Create function with arguments. Each arguments value can be assigned in the current object by
+                        using "this" keyword.
+                        The "this" keyword refers to the current object.</p>
+                    <p class="example">Example:</p>
+                    <pre>
+function emp(id, name, company){
+    this.id = id;
+    this.name = name;
+    this.company = company;
+}
+
+employee = new emp(102, "Anand", "Google");
+document.write(employee.id+
+employee.name+employee.company);
+                    </pre>
+                </ol>
+
+                <h3>Array</h3>
+                <p>Js array is an object that represents a collection of similar type of elements.</p>
+                <h4>There are three way to construct array in js</h4>
+                <ul>
+                    <h5>By array literal</h5>
+                    <p class="example">var arrayName = [value1, value2...valueN];</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var emp = ["anand", "raj", "poonam"];
+for(let i=0; i<emp.length; i++){
+    document.writeln(emp[i]+"<br/>");
+}
+                    </pre>
+                    <h5>JS array directly(new keyword)</h5>
+                    <p>var arrayname = new Array();
+                        Here "new" keyword is used to create instance of array.</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var ame = new Array();
+ame[0] = "anand";
+ame[1] = "rohit";
+ame[3] = "poonam";
+ame[2] = "purnima";
+for(let i=0; i<ame.length; i++){
+    document.writeln(ame[i]);
+}
+                    </pre>
+                    <h5>JS array constructor(new keyword)</h5>
+                    <p class="example">Example:</p>
+                    <pre>
+var emp = new Array("anand", "dewangan",
+ "javascript");
+for(let i=0; i<emp.length; i++){
+    document.write(emp[i]+"<br/>");
+}
+                    </pre>
+                </ul>
+
+                <h3>String</h3>
+                <p>A JS string is an object that represent a sequence of characters.</p>
+                <h4>There are two ways to create string in js:-</h4>
+                <ul>
+                    <h5>String literal</h5>
+                    <p>The string literal is created using double quotes.</p>
+                    <p class="example">var stringname = "string value".</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var str = "this is string literal";
+document.write(str);
+                    </pre>
+                    <h5>String object(using new keyword)</h5>
+                    <p>creating string object using "new" keyword.</p>
+                    <p class="example">var stringname = new String("string literal");
+                        Here, "new" keyword is used to create instance of string.</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var str = new String("anand dewangan");
+document.write(str);
+                    </pre>
+                </ul>
+
+                <h3>Date Object</h3>
+                <p>The JS "date" object can be used to get year, month and day.
+                    You can display a timer on the webpage by the help of js date object.</p>
+                <h4>Date constuctor has 4 variant to create date object.</h4>
+                <ol>
+                    <h5>Today date</h5>
+                    <pre>
+var today = new Date();
+document.getElementById("text").innerHTML
+ = today;
+                    </pre>
+                    <h5>date/month/year</h5>
+                    <pre>
+var date = new Date();
+var day = date.getDate();
+var month = date.getMonth()+1;
+var year = date.getFullYear();
+document.getElementById("text").innerHTML
+ = day+"/"+month+"/"+year;
+        </pre>
+                    <h5>Hour/Minutes/seconds</h5>
+                    <pre>
+var time = new Date();
+var hour = time.getHours();
+var min = time.getMinutes();
+var sec = time.getSeconds();
+document.getElementById("text").innerHTML
+ = hour+":"+min+":"+sec;
+    </pre>
+                    <h5>JS Digital clock Example</h5>
+                    <p>There are two ways to set interval in javascript</p>
+                    <p class="example">Example:</p>
+                    <pre>
+I. setTimeout();
+II. setInterval();
+
+window.onload = function () {
+    getTime();
+}
+function getTime() {
+    var time = new Date();
+    var hour = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+
+    m = checkTime(min);
+    s = checkTime(sec);
+document.getElementById("text").innerHTML
+     = hour+":"+min+":"+sec;
+
+    setTimeout(function(){
+        getTime();
+    }, 1000);
+
+    function checkTime(i){
+        if(i<10){
+            i="0"+i;
+        }
+        return i;
+    }
+}
+    </pre>
+                </ol>
+            </div>
+        </section>
+        <section class="Oops">
+            <div id="head">
+                <h2>Oops</h2>
+                <button id="show" class="oopsShow">Show</button>
+                <button id="hide" class="oopsHide">Hide</button>
+            </div>
+            <div id="Oops">
+                <h3>Introduction</h3>
+                <p>A js object is an entity having state and behavior(propertied and method). Ex:- Car, Pen, Bike, glass
+                    etc.
+                    JS is a object based language. Everything is an object in JS.
+                    JS is template based, not a class based. Here we don't create a class to get the object. We can
+                    direct create Objects.</p>
+                <h4>Three ways to create Object</h4>
+                <ol>
+                    <h5>By Object literal</h5>
+                    <p class="example">Syntax</p>
+                    <p>object = {property1:value1, property2:value2...........propertyN:valueN}</p>
+                    <p class="example">Example:</p>
+                    <pre>
+emp = {id:102, name:"Anand", salary:"50k"}
+document.write(emp.id+" "+emp.name+
+" "+emp.salary);
+                    </pre>
+                    <h5>By creating instance of Object</h5>
+                    <p class="example">Syntax</p>
+                    <p>var objectName = new Object();</p>
+                    <p class="example">Example:</p>
+                    <pre>
+var emp =  new Object();
+emp.id = 102;
+emp.name = "Anand";
+emp.salary = "50k";
+document.write(emp.id+" "+
+emp.name+" "+emp.salary);
+    </pre>
+                    <h5>By using an Object constructor</h5>
+                    <p>Here, we create a function with arguments. Each argument value can be assigned in the current
+                        object by using "this" keyword.
+                        The "this" keyword refers to the current object.</p>
+                    <p class="example">Syntax</p>
+                    <pre>
+function objectName(property1,
+ property2......propertyN){
+    this.property1 = property1;
+    this.property2 = property2;
+    ---------------------------
+    ---------------------------
+    this.propertyN = propertyN;
+}
+variableName = new objectName(value1,
+ value2..........valueN);
+    </pre>
+                    <p class="example">Example:</p>
+                    <pre>
+function emp(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+        
+e = new emp(102, "Anand", "50k");
+document.write(e.id+" "+e.name+
+" "+e.salary); 
+    </pre>
+                </ol>
+
+                <h4>JavaScript Object Methods</h4>
+                <p>Object.assign(), Object.create(), Object.defineProperty(), Object.defineProperties, Object.entries,
+                    Object.freeze, Object.getOwnPropertyDescriptor(),
+                    Object.isSealed(), Object.keys(), Object.seal(), Object.setPrototypeOf(), Object.values().</p>
+
+                <h3>Prototype Object</h3>
+                <p>JS is a prototype-based language that facilitates the objects to acquire properties and features from
+                    one another. Here, each object contains
+                    a prototype object.</p>
+                <p>In JS whenever a function is created the prototype property is added to that function automatically.
+                    This property is a prototype object
+                    that holds a constructor property.</p>
+                <p class="example">Syntax</p>
+                <pre>"ClassName.prototype.methodName"</pre>
+
+                <h4>JavaScript Prototype Object </h4>
+                <p>Let's see an example to add a new method to the constructor function.</p>
+                <p class="example">Example:</p>
+                <pre>
+function Employee(firstName, lastName){
+    this.firstName=firstName;
+    this.lastName=lastName;
+}
+Employee.prototype.fullName=function(){
+    return this.firstName+" "+this.lastName;
+}
+var employee1 = new Employee("Anand", "Dewangan");
+var employee2 = new Employee("Ram", "Syam");
+document.write(employee1.fullName()+"</br>");
+document.write(employee2.fullName());
+    </pre>
+                <p class="example">Example:</p>
+                <pre>
+function Employee(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+Employee.prototype.company="Microsoft";
+Employee.prototype.fullDetails=function(){
+    return this.firstName+" "+this.lastName+
+    " "+this.company;
+}
+var e1 = new Employee("anand", "dewangan");
+var e2 = new Employee("ram", "syam");
+document.write(e1.fullDetails()+"</br>");
+document.write(e2.fullDetails());
+    </pre>
+
+                <h3>Classes</h3>
+                <p>The JS class containes various class members within a body including methods and constructor. The
+                    class is executed in strict mode.
+                    So the code containing the slient error or mistake throws an error.</p>
+
+                <h4>The class syntax contains two componants</h4>
+                <h5>Class Declearations</h5>
+                <p>A class can be defined by using a class declaration. A class keyword is used to declare a class with
+                    any particular name. According to
+                    Js naming convertions, the name of the class always starts with an "Uppercase letter".</p>
+                <p class="example">Example:</p>
+                <pre>
+class Employee{
+    constructor(id, name){
+        this.id = id;
+        this.name = name;
+    }
+    detail(){
+        document.write(this.id+
+        " "+this.name+"<br>");
+    }
+}
+    var e1 = new Employee(102, "anand");
+    var e2 = new Employee(102, "Dewangan");
+    e1.detail();
+    e2.detail();
+    </pre>
+                <h5>Class Expressions </h5>
+                <p>Another way to define a class is by using a class expression. Here it is not mandatory to assign the
+                    name of the class. So the class
+                    expression can be named or unnamed.</p>
+                <p class="example">Example:</p>
+                <pre>
+var emp = class{
+    constructor(id, name){
+        this.id = id;
+        this.name = name;
+    }
+    detail(){
+        document.writeln(this.id+
+        " "+this.name+"<br>");
+    }
+}
+        
+var e1 = new emp(102, "Anand");
+var e2 = new emp(107, "Dewangan");
+e1.detail();
+e2.detail();
+        
+var emp = class{
+    constructor(id, name){
+        this.id = id;
+        this.name = name;
+    }
+    detail(){
+        document.writeln(this.id+
+        " "+this.name+"<br>");
+    } 
+}
+        
+var e1 = new emp(103, "james");
+var e2 = new emp(105, "bond");
+e1.detail();
+e2.detail();
+    </pre>
+                <h3>Constructor Method</h3>
+                <p>A JS contructor method is a special type of method, which is used to initilize and create an object.
+                    It is called when memory is allocated
+                    for an object.</p>
+                <h5>Points to remember</h5>
+                <ul>
+                    <li>The constructor keyword is used to declare a constructor method.</li>
+                    <li>The class can contain one constructor method only.</li>
+                    <li>Js allows us to use parent class contructor through super keyword.</li>
+                </ul>
+                <p class="example">Example:</p>
+                <pre>
+        class Employee{
+            constructor(){
+                this.id = 101;
+                this.name = "Anand";
+            }
+        }
+        var employee = new Employee();
+        document.write(employee.id+
+        " "+employee.name);
+    </pre>
+                <h4>Constructor Method using "super" keyword</h4>
+                <p>The super keyword is used to call the parent class constructor</p>
+                <p class="example">Example:</p>
+                <pre>
+class companyName{
+    constructor(){
+        this.company = "Microsoft";
+    }
+}
+class employee extends companyName{
+    constructor(id, name){
+        super();
+        this.id = id;
+        this.name = name;
+    }
+}
+var emp = new employee(102, "Anand");
+document.write(emp.id+" "+emp.name+
+" "+emp.company);
+    </pre>
+
+                <h3>static Method</h3>
+                <p>The Js provides "static" methods that belong to the class instead of an instance of that class. So an
+                    instance is not required to call
+                    the static method. These methods are called directly on the class itself.</p>
+                <h5>Points to remember</h5>
+                <ul>
+                    <li>The static keyword is used to declare a static method.</li>
+                    <li>The static method can be of any name.</li>
+                    <li>A class can contain more then one static method.</li>
+                    <li>If we declare more than one static method with a similar name, the js always invokes the last
+                        one.</li>
+                    <li>The static method can be used to create utility functions.</li>
+                    <li>We can use "this" keyword to call a static method within another static method.</li>
+                    <li>We cann't use this keyword directly to call a static method within the non-static method. In
+                        such case, we can call the static method
+                        either using the class name or as the property of the constructor.</li>
+                </ul>
+                <p class="example">JS "static" Method example </p>
+                <pre>
+class Test{
+    static display(){
+        return "static method is invoked";
+    }
+}
+document.write(Test.display());
+    </pre>
+  <p>2. Let's see an example to invoke more than one static method :-</p>  
+    <pre>
+class Test {
+    static display(){
+        console.log("static method is invoked");
+    }
+    static display2(){
+        console.log("static method is invoked again!!");
+    }
+}
+Test.display();
+Test.display2();
+
+    </pre>
+   <p>3. Let's see an example to invoke more than one static method with similar names:-</p> 
+                <pre>
+class Test {
+    static display(){
+        return "static method is invoked";
+    }
+    static display(){
+        return "static method is invoked again!!";
+    }
+}
+document.write(Test.display());
+</pre>
+       <p>4. Let's see an example to invoke a static method within the constructor :-</p> 
+        <pre>
+class Test {
+    constructor() {
+        document.writeln(Test.display());
+        document.writeln(this.constructor.display());
+    }
+    static display() {
+        return "static method is invoked";
+    }
+}
+
+var test = new Test();
+    </pre>
+       <p>5. Let's see an example to invoke a static method within the non-static method :-</p> 
+    <pre>
+class Test{
+    static display() {
+        return "static method is invoked";
+    }
+
+    show() {
+        document.writeln(Test.display());
+    }
+}
+var test = new Test();
+test.show();
+    </pre>
+
+                <h3>JavaScript Encapsulation</h3>
+                <p>The Js encapsulation is a process to binding the data(variables) with the functions acting on that
+                    data. It allows us to control the data
+                    and validate it. To achieve ab encapsulation in Js :-</p>
+                <p>1. Use "var" keyword to make data members private.</p>
+                <p>2. Use "setter" methods to set the data and "getter" methods to get the data.</p>
+                <h5>The encapsulation allows us to handle an object using the following properties :-</h5>
+                <ul>
+                    <li>Read/Write :- Here, we use setter method to write the data and getter methods to read the data.
+                    </li>
+                    <li>Read only :- In this case we use getter methods only.</li>
+                    <li>Write only :- In this case we use setter methods only.</li>
+                </ul>
+                <p class="example">JavaScript Encapsulation Example - Validate :-</p>
+                <pre>
+        class Student {
+            constructor(){
+                var name;
+                var marks;
+            }
+            getName(){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getMarks(){
+                return this.marks;
+            }
+            setMarks(marks){
+                if(marks<0 || marks>100){
+                    alert("invalid marks");
+                }
+                else{
+                    this.marks = marks;
+                }
+            }
+        }
+        var st = new Student();
+        st.setName("Anand");
+        st.setMarks(110);
+        document.write(st.getName()+" "+st.setMarks());
+    </pre>
+                <p class="example">JavaScript Encapsulation Example: Prototype-based approach :-</p>
+                <p>Here we perform prototype-based encapsulation.</p>
+                <pre>
+function Student(name, roll_no){
+    var sName = name;
+    var sRoll = roll_no;
+        
+    Object.defineProperty(this,"name",{
+        get:function(){
+            return sName;
+        },
+        set:function(sName){
+            this.sName=sName;
+        }
+    });
+        
+    Object.defineProperty(this,"roll_no",{
+        get:function(){
+            return roll_no;
+        },
+        set:function(sRoll){
+            this.sRoll = sRoll;
+        }
+    });
+}
+var st = new Student("Anand", 102);
+document.write(st.name+" "+st.roll_no);
+    </pre>
+
+                <h3>Inheritance</h3>
+                <p>The Js inheritance is a machanism that allows us to create new classes on the basis of already
+                    existing classes. It provides flexibility
+                    to the child class to reuse the methods and variables of a parent class.</p>
+                <p>The Js "extends" keyword is used to create a child on the basis of a parent class. It facilitates
+                    child class to acquire all the properties
+                    and behavior of its parent class.</p>
+                <h4>Points to remember</h4>
+                <ul>
+                    <li>It maintains an IS-A relationship.</li>
+                    <li>The extends keyword is used in class expressions or class declarations.</li>
+                    <li>Using extends keyword, we can acquire all the properties and behavior of the inbuilt object as
+                        well as custom classes.</li>
+                    <li>We can also use a prototype-based approach to achieve inheritance.</li>
+                </ul>
+                <p class="example">JavaScript extends Example inbuilt object :-</p>
+                <pre>
+
+        class Today extends Date{
+            constructor(){
+                super();
+            }
+        }
+        var curr = new Today();
+        document.write(curr.getDate()+
+        "-"+curr.getMonth()+1
+        +"-"+curr.getFullYear());
+
+        class Year extends Date{
+            constructor(year){
+                super(year);
+            }
+        }
+        var m = new Year("27 October, 1998 ");
+        document.write("year value is :
+         "+m.getFullYear());
+    </pre>
+                <p class="example">JavaScript extends example: a prototype-based approach</p>
+        <pre>
+        function Bike(company){
+            this.company=company;
+        }
+        Bike.prototype.getCompany = function(){
+            return this.company;
+        }
+
+        function Vehicle(name, price){
+            this.name=name;
+            this.price=price;
+        }
+        var bike = new Bike("Honda");
+        Vehicle.prototype=bike; 
+
+        var vehicle = new Vehicle("Shine", 70000);
+        document.write(vehicle.getCompany()+
+        " "+vehicle.name+" "+
+        vehicle.price);
+    </pre>
+
+                <h3>Polymorphism</h3>
+                <p>A polymorphism is a core concept of an object-oriented paradigm that provides a way to perform a
+                    single action in different forms. It
+                    provides an ability to call the same method on different js objects. As js is not a type-safe
+                    language, we can pass any type of data
+                    members with the methods.</p>
+                <p class="example">JavaScript Polymorphism Example</p>
+                <p>Let's see an example where a child class object invokeds the parent class methods.</p>
+                <pre>
+        class A{
+            display(){
+                document.writeln("Anand Dewangan");
+            }
+        }
+        class B extends A{
+        }
+        var b = new B();
+        b.display();
+    </pre>
+
+                <p>Let's see an example where a child and parent class contains the same method. Here, the object of
+                    child class invokes both classes
+                    method.</p>
+                <pre>
+        class A{
+            display(){
+                document.writeln("A is invoked <br>");
+            }
+        }
+        class B extends A{
+            display(){
+                document.writeln("B is invoked");
+            }
+        }
+        var a = [new A(), new B()];
+        a.forEach(function(msg){
+            msg.display();
+        })
+    </pre>    
+       <p>3. Let's see the same example with prototype-based approach.</p> 
+    <pre>
+        function A(){}
+        A.prototype.display = function(){
+            return "A is invoked";
+        }
+        function B(){}
+        B.prototype = Object.create(A.prototype);
+        
+        var a = [new A(), new B()];
+        a.forEach(function(msg){
+            document.write(msg.display());
+        })
+    </pre>
+
+                <h3>Abstraction</h3>
+                <p>An abstraction is a way of hiding the implementation details and showing only the functionality to
+                    users. In other words, it ignores the
+                    irrelevant details and shows only the required one.</p>
+                <h5>Points to remember</h5>
+                <ul>
+                    <li>We cann't create an instance of Abstract class.</li>
+                    <li>It reduces the duplication of code.</li>
+                </ul>
+                <p class="example">JavaScript Abstraction Example:</p>
+
+                <p>1. Let's check whether we can create an instance of "Abstract" class or not.</p>
+                <pre>
+        function Vehicle(){
+            this.name = name;
+            throw new Error\
+            ("You cann't create an instance of Abstract class");
+        }
+        Vehicle.prototype.display=function(){
+            return this.name;
+        }
+        var vehicle = new Vehicle();
+    </pre>
+                <p>2. Let's see an example to achieve abstraction.</p>
+                <pre>
+        function Vehicle(){
+            this.vehicleName="vehicleName";
+            throw new Error("You cann't create an
+             instance of Abstract class");
+        }
+        Vehicle.prototype.display=function(){
+            return "Vehicle is : "+this.vehicleName;
+        }
+        function Bike(vehicleName){
+            this.vehicleName=vehicleName;
+        }
+        Bike.prototype=Object.create(Vehicle.prototype);
+        var bike = new Bike("Honda");
+        document.writeln(bike.display());
+    </pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+    <button id="dark_mode">Night</button>
+    <script src="app.js"></script>
+</body>
+
+</html>
